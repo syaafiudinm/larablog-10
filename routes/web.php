@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -15,15 +17,19 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/',[HomeController::class, 'homepage']);
 
 // Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+    //     return view('dashboard');
+    // })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+// HomeController
+Route::get('/',[HomeController::class, 'homepage']);
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
-Route::get('post', [HomeController::class, 'post'])->middleware('auth', 'admin');
+
+// Admin Controller // 
+Route::get('/post_page', [AdminController::class, 'post_page']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
