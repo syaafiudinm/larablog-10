@@ -12,6 +12,12 @@
         @include('admin.sidebar')
       <!-- Sidebar Navigation end-->
       <div class="page-content">
+        @if (session()->has('message'))
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                {{session()->get('message')}}
+            </div>
+        @endif
         <div class="w-full text-center mt-5 text-2xl">All Post</div>
             <div class="container mt-5">
                 <div class="row">
@@ -32,6 +38,7 @@
                                         <th>Post status</th>
                                         <th>User type</th>
                                         <th>Image</th>
+                                        <th>Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
@@ -47,7 +54,7 @@
                                         </td>
                                         <td>
                                             <a href="" class="btn btn-success mx-2">Edit</a>
-                                            <a href="" class="btn btn-danger" onclick="return confirm('Are ou sure want to delete category?');">Delete</a>
+                                            <a href="{{url('/delete_post', $post->id)}}" class="btn btn-danger" onclick="return confirm('Are ou sure want to delete category?');">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
