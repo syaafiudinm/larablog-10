@@ -39,6 +39,7 @@
 
                       <div class="mb-3">
                           <label>Post Title</label>
+                          <br>
                           <input type="text" class="form-control" name="title" value="{{old('name')}}" autocomplete="off">
                           @error('name')
                               <span class="text text-danger">{{$message}}</span>
