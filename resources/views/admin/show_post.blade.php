@@ -26,9 +26,7 @@
                     <div class="col md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Post
                                     <a href="{{url('/post_page')}}" class="btn btn-primary float-end">Add Post</a>
-                                </h4>
                             </div>
                             <div class="card-body">
                                <table class="table table-bordered table-striped">
@@ -55,7 +53,7 @@
                                             <img src="postimage/{{$post->image}}" alt="img" style="width: 70px; height: 70px;">
                                         </td>
                                         <td>
-                                            <a href="" class="btn btn-success mx-2">Edit</a>
+                                            <a href="{{url('edit_page', $post->id)}}" class="btn btn-success mx-2">Edit</a>
                                             <a href="{{url('/delete_post', $post->id)}}" class="btn btn-danger" onclick="confirmation(event)">Delete</a>
                                         </td>
                                     </tr>

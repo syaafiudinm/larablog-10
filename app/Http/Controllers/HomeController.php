@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,7 +14,8 @@ class HomeController extends Controller
             $usertype = Auth()->user()->usertype;
 
             if($usertype == 'user'){
-                return view('home.homepage');
+                $post = Post::all();
+                return view('home.homepage', compact('post'));
             }
 
             else if($usertype == 'admin'){
@@ -33,6 +35,7 @@ class HomeController extends Controller
     }
 
     public function homepage(){
-        return view('home.homepage');
+        $post = Post::all();
+        return view('home.homepage', compact('post'));
     }
 }

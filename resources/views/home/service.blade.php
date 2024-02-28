@@ -1,21 +1,24 @@
 <div class="services_section layout_padding">
     <div class="container">
-       <h1 class="services_taital">Services </h1>
+       <h1 class="services_taital">Blog Post</h1>
        <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
        <div class="services_section_2">
           <div class="row">
-             <div class="col-md-4">
-                <div><img src="images/img-1.png" class="services_img"></div>
-                <div class="btn_main"><a href="#">Rafting</a></div>
-             </div>
-             <div class="col-md-4">
-                <div><img src="images/img-2.png" class="services_img"></div>
-                <div class="btn_main active"><a href="#">Hiking</a></div>
-             </div>
-             <div class="col-md-4">
-                <div><img src="images/img-3.png" class="services_img"></div>
-                <div class="btn_main"><a href="#">Camping</a></div>
-             </div>
+            
+            @foreach ($post as $post)
+            <div class="col-md-4">
+               <div class="card border-dark" style="width: 18rem;">
+                 <img src="/postimage/{{$post->image}}" class="card-img-top" alt="..." style="height: 150px;">
+                 <div class="card-body">
+                   <h5 class="card-title">{{$post->title}}</h5>
+                   <p class="card-text">{{$post->description}}</p>
+                   <p class="card-text"><small class="text-body-secondary">Post By {{$post->name}}</small></p>
+                   <a href="#" class="btn btn-primary">Read More</a>
+                 </div>
+               </div>
+            </div>
+            @endforeach
+
           </div>
        </div>
     </div>

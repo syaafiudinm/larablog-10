@@ -31,7 +31,7 @@
 
             <div class="card">
               <div class="card-header">
-                  <h4>Add Categories</h4>
+                  <a href="{{url('show_post')}}" class="btn btn-success">Back</a>
               </div>
               <div class="card-body">
                   <form action="{{url('add_post')}}" method="POST" enctype="multipart/form-data">
