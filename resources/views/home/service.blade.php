@@ -8,12 +8,12 @@
             @foreach ($post as $post)
             <div class="col-md-4">
                <div class="card border-dark" style="width: 18rem;">
-                 <img src="/postimage/{{$post->image}}" class="card-img-top" alt="..." style="height: 150px;">
+                 <img src="/postimage/{{$post->image}}" class="card-img-top" alt="" style="height: 150px;">
                  <div class="card-body">
                    <h5 class="card-title">{{$post->title}}</h5>
-                   <p class="card-text">{{$post->description}}</p>
-                   <p class="card-text"><small class="text-body-secondary">Post By {{$post->name}}</small></p>
-                   <a href="#" class="btn btn-primary">Read More</a>
+                   <p class="card-text mb-3">{{$post->description}}</p>
+                   <p class="card-text"><small class="text-body-secondary mb-5">Post By {{$post->name}}</small></p>
+                   <a href="{{url('post_details', $post->id)}}" class="btn btn-primary">Read More</a>
                  </div>
                </div>
             </div>

@@ -26,6 +26,7 @@ use App\Http\Controllers\ProfileController;
 // HomeController
 Route::get('/',[HomeController::class, 'homepage']);
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
+Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
 
 
 // Admin Controller // 
