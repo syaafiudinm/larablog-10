@@ -24,6 +24,8 @@
       </style>
    </head>
    <body>
+
+    @include('sweetalert::alert')
     
         @if (session()->has('message'))
             <div class="alert alert-success">

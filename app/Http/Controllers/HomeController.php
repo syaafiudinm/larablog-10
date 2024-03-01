@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -78,6 +79,8 @@ class HomeController extends Controller
         }
 
         $post->save();
+
+        Alert::success('Done!', 'your Post created successfully');
 
         return redirect()->back()->with('message', 'post created successfully');
     }

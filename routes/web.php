@@ -25,7 +25,7 @@ use App\Http\Controllers\ProfileController;
 
 // HomeController
 Route::get('/',[HomeController::class, 'homepage']);
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
 Route::get('/create_post', [HomeController::class, 'create_post'])->middleware('auth');
 Route::post('/user_post', [HomeController::class, 'user_post'])->middleware('auth');

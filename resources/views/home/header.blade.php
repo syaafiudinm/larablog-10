@@ -33,6 +33,9 @@
              <li class="active"><a href="index.html">Home</a></li>
              <li><a href="about.html">About</a></li>
              <li><a href="blog.html">Blog</a></li>
+             <li class="nav-item">
+               <a href="{{url('create_post')}}">create post</a>
+            </li>
 
             @if (Route::has('login'))
                 
