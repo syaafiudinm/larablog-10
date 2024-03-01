@@ -20,26 +20,19 @@
    <body>
     
         <!-- Navbar content -->
-        <ul class="nav justify-content-center mb-5">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
+        <div class="container">
+          <div class="d-flex bd-highlight mb-3 mt-5">
+            <a href="{{url('home')}}" class="mr-auto p-4 bd-highlight btn btn-primary" style="font-size: 15px;">Back To all Post</a>
+            <div class="p-2 bd-highlight ml-auto" style="font-size: 30px">{{$post->title}} details</div>
+          </div>
+        </div>
+        
 
       <!-- header section start -->
       <div class="container">
           <div class="jumbotron">
             <div class="card mb-3 mt-10">
-              <img src="/postimage/{{$post->image}}" style="max-height: 200px;" class="object-fit-cover" alt="">
+              <img src="/postimage/{{$post->image}}" style="max-height: 400px;" class="object-fit-cover" alt="">
               <div class="card-body">
                 <h5 class="card-title">{{$post->title}}</h5>
                 <p class="card-text">{{$post->description}}</p>
