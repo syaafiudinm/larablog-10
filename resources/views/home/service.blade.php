@@ -7,7 +7,7 @@
             
             @foreach ($post as $post)
             <div class="col-md-4">
-               <div class="card border-dark" style="width: 18rem;">
+               <div class="card border-dark mb-5" style="width: 18rem;">
                  <img src="/postimage/{{$post->image}}" class="card-img-top" alt="" style="height: 150px;">
                  <div class="card-body">
                    <h5 class="card-title">{{$post->title}}</h5>

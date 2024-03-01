@@ -27,12 +27,12 @@
 
     @include('sweetalert::alert')
     
-        @if (session()->has('message'))
+        {{-- @if (session()->has('message'))
             <div class="alert alert-success">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
               {{session()->get('message')}}
             </div>
-        @endif
+        @endif --}}
             <div class="text-center mt-5">
                 <h1 class="post-title">Add your Post!</h1>
                 <a href="{{url('home')}}" class="btn btn-primary">Back</a>

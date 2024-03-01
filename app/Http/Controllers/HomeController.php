@@ -82,6 +82,6 @@ class HomeController extends Controller
 
         Alert::success('Done!', 'your Post created successfully');
 
-        return redirect()->back()->with('message', 'post created successfully');
+        return redirect()->back();
     }
 }
