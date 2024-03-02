@@ -35,7 +35,7 @@
         @endif --}}
             <div class="text-center mt-5">
                 <h1 class="post-title">Add your Post!</h1>
-                <a href="{{url('home')}}" class="btn btn-primary">Back</a>
+                <a href="{{url('my_post')}}" class="btn btn-primary">Back</a>
             </div>
 
           <div class="container jumbotron mt-5">
