@@ -28,7 +28,9 @@
             @if (Route::has('login'))
                 
             @auth
-            
+            <li>
+               <a href="{{url('/my_post')}}">My Post</a>
+            </li>
             <li>
                <x-app-layout>
                </x-app-layout>
