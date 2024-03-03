@@ -1,4 +1,4 @@
-<div class="footer_section layout_padding">
+{{-- <div class="footer_section layout_padding">
     <div class="container">
        <div class="input_btn_main">
           <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
@@ -26,7 +26,7 @@
     <div class="container">
        <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
     </div>
- </div>
+ </div> --}}
  <!-- copyright section end -->
  <!-- Javascript files-->
  <script src="js/jquery.min.js"></script>
