@@ -19,7 +19,7 @@
                     <p class="lead">This is an Admin Page, a simple page where admin can control the post whether is an admin or an user post!</p>
                     <hr class="my-4">
                     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a class="btn btn-primary btn-lg" href="{{url('show_post')}}" role="button">see All post!</a>
+                    <a class="btn btn-primary btn-lg" href="{{url('/')}}" role="button">see All post!</a>
                 </div>
             </div>
         </div>
