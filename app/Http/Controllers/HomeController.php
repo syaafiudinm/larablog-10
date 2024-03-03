@@ -11,11 +11,11 @@ class HomeController extends Controller
 {
     public function index(){
         if(Auth::id()){
-            
+
+            $post = Post::where('post_status','=','active')->get();
             $usertype = Auth()->user()->usertype;
 
             if($usertype == 'user'){
-                $post = Post::all();
                 return view('home.homepage', compact('post'));
             }
 
@@ -36,7 +36,7 @@ class HomeController extends Controller
     }
 
     public function homepage(){
-        $post = Post::all();
+        $post = Post::where('post_status','=','active')->get();
         return view('home.homepage', compact('post'));
     }
 

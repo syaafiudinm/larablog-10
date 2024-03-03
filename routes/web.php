@@ -44,6 +44,8 @@ Route::get('/show_post', [AdminController::class, 'show_post'])->middleware('aut
 Route::get('/delete_post/{id}', [AdminController::class, 'delete_post'])->middleware('auth');
 Route::get('/edit_page/{id}', [AdminController::class, 'edit_page'])->middleware('auth');
 Route::post('/update_post/{id}', [AdminController::class, 'update_post'])->middleware('auth');
+Route::get('/accept_post/{id}', [AdminController::class, 'accept_post']);
+Route::get('/reject_post/{id}', [AdminController::class, 'reject_post']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
