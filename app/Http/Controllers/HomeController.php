@@ -94,4 +94,13 @@ class HomeController extends Controller
 
         return view('home.my_post', compact('data'));
     }
+
+    public function my_post_del(int $id){
+        $data = Post::findOrFail($id);
+
+        Alert::confirmDelete('are you sure want to delete this Post?');
+        $data->delete();
+
+        return redirect()->back()->with('message', 'post deleted successfully');
+    }
 }
