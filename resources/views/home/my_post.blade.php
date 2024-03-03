@@ -26,7 +26,7 @@
           </div>
         </div> --}}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand text-2xl" href="#">Navbar</a>
+          <a class="navbar-brand text-2xl" href="#">Larablog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +36,7 @@
                 <a class="nav-link active" href="{{url('/create_post')}}">Create Post</a>
               </div>
             </div>
-          </nav>
+        </nav>
 
           
           @if (session()->has('message'))
@@ -50,7 +50,7 @@
                 <h1 class="text-center">your post!</h1>
               </div>
               <div class="row mr-5 ml-5 mt-5">
-                @foreach ($data as $index => $post)
+              @foreach ($data as $index => $post)
                 @if ($index % 2 == 0)
                   <div class="w-100"></div> <!-- Menutup div sebelumnya dan membuka div baru setiap dua kali iterasi -->
                 @endif
@@ -62,6 +62,7 @@
                       <p class="card-text">{{$post->description}}</p>
                       <p class="card-text"><small class="text-body-secondary">post by {{$post->name}}</small></p>
                       <a href="{{url('my_post_del',$post->id)}}" class="btn btn-danger" onclick="confirmation(event)">delete Post</a>
+                      <a href="{{url('update_post',$post->id)}}" class="btn btn-success">Update</a>
                     </div>
                   </div>
                 </div>

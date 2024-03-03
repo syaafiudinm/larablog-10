@@ -64,7 +64,7 @@
 
                 </form>
             </div>
-        </div>
+          </div>
       </div>
         {{-- footer section --}}
         @include('admin.footer')
