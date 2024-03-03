@@ -35,12 +35,13 @@ Route::get('/my_post_del/{id}', [HomeController::class, 'my_post_del'])->middlew
 
 
 // Admin Controller // 
-Route::get('/post_page', [AdminController::class, 'post_page']);
-Route::post('/add_post', [AdminController::class, 'add_post']);
-Route::get('/show_post', [AdminController::class, 'show_post']);
-Route::get('/delete_post/{id}', [AdminController::class, 'delete_post']);
-Route::get('/edit_page/{id}', [AdminController::class, 'edit_page']);
-Route::post('/update_post/{id}', [AdminController::class, 'update_post']);
+Route::get('/welcome_page', [AdminController::class, 'welcome_page'])->middleware('auth');
+Route::get('/post_page', [AdminController::class, 'post_page'])->middleware('auth');
+Route::post('/add_post', [AdminController::class, 'add_post'])->middleware('auth');
+Route::get('/show_post', [AdminController::class, 'show_post'])->middleware('auth');
+Route::get('/delete_post/{id}', [AdminController::class, 'delete_post'])->middleware('auth');
+Route::get('/edit_page/{id}', [AdminController::class, 'edit_page'])->middleware('auth');
+Route::post('/update_post/{id}', [AdminController::class, 'update_post'])->middleware('auth');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

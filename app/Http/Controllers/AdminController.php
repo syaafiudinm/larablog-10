@@ -8,7 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    Public function welcome_page(){
+        Auth()->user();
+        return view('admin.welcome_page');
+    }
+
     public function post_page(){
+        Auth()->user();
         return view('admin.post_page');
     }
 

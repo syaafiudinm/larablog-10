@@ -22,7 +22,7 @@
         <!-- Navbar content -->
         <div class="container">
           <div class="d-flex bd-highlight mb-3 mt-5">
-            <a href="{{url('home')}}" class="mr-auto p-4 bd-highlight btn btn-primary" style="font-size: 15px;">Back To all Post</a>
+            <a href="{{url('/')}}" class="mr-auto p-4 bd-highlight btn btn-primary" style="font-size: 15px;">Back To all Post</a>
             <div class="p-2 bd-highlight ml-auto" style="font-size: 30px">{{$post->title}} details</div>
           </div>
         </div>
