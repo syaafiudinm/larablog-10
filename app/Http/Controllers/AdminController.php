@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    public function __construct() {
+        $this->middleware('admin');
+    }
     Public function welcome_page(){
         Auth()->user();
         return view('admin.welcome_page');
